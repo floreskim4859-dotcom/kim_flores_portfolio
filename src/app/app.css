@@ -1,0 +1,15 @@
+:host {
+  --black: #f5f5f5;
+  --ink: #ededed;
+  --muted: #969696;
+  --line: #303030;
+  --white: #090909;
+  display: block;
+  color: var(--ink);
+}
+
+.portfolio {
+  min-height: 100vh;
+  overflow: clip;
+  background: var(--white);
+}

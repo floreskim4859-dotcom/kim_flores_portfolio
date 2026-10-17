@@ -1,0 +1,121 @@
+:host {
+  display: block;
+}
+.experience-section {
+  padding: 105px 0 115px;
+  border-block: 1px solid #252525;
+  background: #0d0d0d;
+  color: #f2f2f2;
+}
+.experience-layout {
+  display: grid;
+  width: min(1120px, calc(100% - 64px));
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 100px;
+  margin: auto;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #999;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+.heading-rule {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #555;
+}
+h2 {
+  margin: 23px 0 0;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.12;
+}
+h2 span {
+  color: #777;
+  font-style: italic;
+}
+.section-intro {
+  max-width: 390px;
+  margin: 20px 0 0;
+  color: #999;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.experience-item {
+  display: grid;
+  grid-template-columns: 42px 1fr 20px;
+  gap: 14px;
+  padding: 25px 0;
+  border-bottom: 1px solid #303030;
+}
+.experience-item:first-child {
+  padding-top: 4px;
+}
+.experience-number {
+  padding-top: 4px;
+  color: #777;
+  font-size: 10px;
+}
+.experience-label {
+  margin: 0 0 8px;
+  color: #888;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.experience-content h3 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+.experience-company {
+  margin: 5px 0 0;
+  color: #ddd;
+  font-size: 12px;
+  font-weight: 600;
+}
+.experience-dates {
+  margin: 4px 0 0;
+  color: #888;
+  font-size: 10px;
+}
+.experience-content > p:last-child {
+  max-width: 380px;
+  margin: 8px 0 0;
+  color: #999;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.experience-arrow {
+  color: #777;
+  font-size: 15px;
+}
+@media (max-width: 850px) {
+  .experience-layout {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 45px;
+  }
+}
+@media (max-width: 600px) {
+  .experience-section {
+    padding: 75px 0 80px;
+  }
+  .experience-layout {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .experience-item:first-child {
+    padding-top: 5px;
+  }
+}

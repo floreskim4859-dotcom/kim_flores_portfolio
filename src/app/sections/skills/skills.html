@@ -1,0 +1,18 @@
+<section class="skills-section" aria-labelledby="skills-title">
+  <div class="skills-heading">
+    <div>
+      <p class="eyebrow">TOOLS I WORK WITH <span class="heading-rule"></span> 04</p>
+      <h2 id="skills-title">A versatile <span>toolkit.</span></h2>
+    </div>
+    <p class="skills-hint">Hover or focus a skill<br />to see its current level.</p>
+  </div>
+  <div class="skills-grid">
+    @for (skill of skills; track skill.name) {
+      <button class="skill-item" type="button" [style.--skill-level]="skill.level + '%'" [attr.aria-label]="skill.name + ', ' + skill.level + ' percent'">
+        <span class="skill-name">{{ skill.name }}</span>
+        <span class="skill-level">{{ skill.level }}<small>%</small></span>
+        <span class="skill-track" aria-hidden="true"><span></span></span>
+      </button>
+    }
+  </div>
+</section>

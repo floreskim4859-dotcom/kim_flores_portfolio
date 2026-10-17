@@ -1,0 +1,24 @@
+<section class="experience-section" aria-labelledby="experience-title">
+  <div class="experience-layout">
+    <div class="experience-heading">
+      <p class="eyebrow">THE JOURNEY <span class="heading-rule"></span> 02</p>
+      <h2 id="experience-title">Experience<br />that <span>keeps growing.</span></h2>
+      <p class="section-intro">Every role has added a new perspective and another reason to keep learning.</p>
+    </div>
+    <div class="experience-list">
+      @for (item of roles; track item.role; let i = $index) {
+        <article class="experience-item">
+          <span class="experience-number">0{{ i + 1 }}</span>
+          <div class="experience-content">
+            <p class="experience-label">CAREER MILESTONE</p>
+            <h3>{{ item.role }}</h3>
+            <p class="experience-company">{{ item.company }}</p>
+            <p class="experience-dates">{{ item.period }}</p>
+            <p>{{ item.focus }}</p>
+          </div>
+          <span class="experience-arrow" aria-hidden="true">↗</span>
+        </article>
+      }
+    </div>
+  </div>
+</section>
