@@ -1,0 +1,46 @@
+<section class="chat-section" id="chat" aria-labelledby="chat-title">
+  <div class="chat-layout">
+    <div class="chat-intro">
+      <p class="eyebrow">PORTFOLIO ASSISTANT <span class="heading-rule"></span> 06</p>
+      <h2 id="chat-title">Curious about<br /><span>my work?</span></h2>
+      <p class="section-intro">Ask about my experience, skills, education, or the kind of opportunities I’m looking for.</p>
+    </div>
+
+    <div class="chat-panel" aria-label="Chat with Kim's portfolio assistant">
+      <header class="chat-header">
+        <div>
+          <p class="chat-kicker">A QUICK CONVERSATION</p>
+          <h3>Ask Kim</h3>
+        </div>
+        <span class="chat-status"><span aria-hidden="true"></span> Here to help</span>
+      </header>
+
+      <div class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+        @for (message of messages(); track $index) {
+          <p class="message" [class.visitor-message]="message.sender === 'visitor'" [class.bot-message]="message.sender === 'bot'">{{ message.text }}</p>
+        }
+      </div>
+
+      <div class="suggestions">
+        <p class="suggestion-label">QUICK QUESTIONS</p>
+        @for (suggestion of suggestions; track suggestion) {
+          <button class="suggestion-button" type="button" (click)="ask(suggestion)">{{ suggestion }}</button>
+        }
+      </div>
+
+      <form class="chat-form" (submit)="send($event)">
+        <label class="visually-hidden" for="chat-question">Ask a question about Kim</label>
+        <input
+          id="chat-question"
+          #questionInput
+          type="text"
+          placeholder="Ask a question..."
+          autocomplete="off"
+          [value]="draft()"
+          (input)="draft.set(questionInput.value)"
+        />
+        <button class="send-button" type="submit" [disabled]="!draft().trim()">Send</button>
+      </form>
+    </div>
+  </div>
+</section>

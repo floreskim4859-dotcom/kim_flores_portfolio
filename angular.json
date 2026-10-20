@@ -22,6 +22,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "Kim Lopez Flores_ResumeDev.pdf",
+                "input": "src",
+                "output": "assets"
               }
             ],
             "styles": [

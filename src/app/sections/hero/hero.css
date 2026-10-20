@@ -87,6 +87,15 @@ h1 span {
 .button-dark:hover {
   background: #d7d7d7;
 }
+.button-resume {
+  border: 1px solid #454545;
+  background: transparent;
+  color: #e5e5e5;
+}
+.button-resume:hover {
+  border-color: #888;
+  background: #1b1b1b;
+}
 .text-link {
   color: #aaa;
   font-size: 12px;
@@ -203,6 +212,10 @@ h1 span {
   }
   .hero-description {
     font-size: 14px;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 16px;
   }
   .hero-footnote {
     margin-top: 32px;
