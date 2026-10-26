@@ -12,10 +12,23 @@
         <article class="project-card">
           <div class="project-image-wrap">
             <img [src]="'https://images.unsplash.com/' + project.image + '?auto=format&fit=crop&w=1000&q=85'" [alt]="project.type + ' project preview'" loading="lazy" />
-            <span class="project-open" aria-hidden="true">↗</span>
+            @if (project.link) {
+              <a class="project-open" [href]="project.link" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Open ' + project.title">↗</a>
+            } @else {
+              <span class="project-open" aria-hidden="true">↗</span>
+            }
           </div>
           <div class="project-meta"><span>{{ project.number }} / SELECTED WORK</span><span>{{ project.type }}</span></div>
-          <h3>{{ project.title }}</h3>
+          <h3>
+            @if (project.link) {
+              <a [href]="project.link" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
+            } @else {
+              {{ project.title }}
+            }
+          </h3>
+          @if (project.description) {
+            <p class="project-description">{{ project.description }}</p>
+          }
         </article>
       }
     </div>
