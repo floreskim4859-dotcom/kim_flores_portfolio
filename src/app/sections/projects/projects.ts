@@ -17,11 +17,11 @@ export class ProjectsComponent {
     },
     {
       number: '02',
-      title: 'Project two',
-      type: 'Product design',
+      title: 'FocusApp',
+      type: 'Task management',
       description: null,
       image: 'photo-1558655146-d09347e92766',
-      link: null
+      link: 'https://focus-onmy-task.vercel.app/'
     },
     {
       number: '03',
